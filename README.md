@@ -18,3 +18,6 @@ A fully automated AI tool built for the **AI PrepPulse Hackathon**. This tool as
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
+
+# DEMONSTRATION VIDEO LINK 
+**https://youtu.be/xAiItQk7sO0**
