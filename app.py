@@ -3,7 +3,6 @@ import google.generativeai as genai
 import pdfplumber
 import os
 from dotenv import load_dotenv
-
 # --- CONFIGURATION ---
 load_dotenv() # Load the secret .env file
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY") # Get the key safely
@@ -24,7 +23,6 @@ def extract_text_from_pdf(uploaded_file):
             return text
     except Exception as e:
         return None
-
 def analyze_readiness(resume_text, job_description):
     """Sends the resume and job description to AI for scoring."""
     
@@ -53,7 +51,7 @@ def analyze_readiness(resume_text, job_description):
     """
     
     # Get response from Gemini (the AI model)
-    model = genai.GenerativeModel('gemini-pro')
+    model = genai.GenerativeModel('gemini-2.5-flash-lite')
     response = model.generate_content(prompt)
     return response.text
 
